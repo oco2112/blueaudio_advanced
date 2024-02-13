@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>blue audio</title>
+</head>
+
+<body>
+    <div class="sphere-container">
+        <div class="sphere"></div>
+    </div>
+    <p class="p1">blue audio by obi</p>
+    <p><b>waveform:</b></p>
+    <select id="waveform_select">
+        <option value="sine">Sine</option>
+        <option value="sawtooth">Sawtooth</option>
+    </select>
+
+    <form id="method_select">
+        <p><b>synthesis method:</b></p>
+        <input type="radio" name="Method" value="default" checked>
+        <label for="direction1">Default</label><br>
+        <input type="radio" name="Method" value="additive">
+        <label for="direction1">Additive synthesis</label><br>
+        <input type="radio" name="Method" value="AM">
+        <label for="direction2">AM synthesis</label><br>
+        <input type="radio" name="Method" value="FM">
+        <label for="direction3">FM synthesis</label><br>
+    </form>
+    <div>
+        <label><input type="range" min="2" max="10" step="1" value="5" class="slider" id="PartialsSlider"
+                onchange="updatePartials()" />Partials (Additive synthesis only)
+        </label>
+    </div>
+    <div>
+        <label><input type="range" min="0.1" max="4" step="0.1" value="1" class="slider" id="PitchSlider"
+                onchange="updatePitch()" />Pitch
+        </label>
+    </div>
+    <div>
+        <label><input type="range" min="0.1" max="2" step="0.1" value="0.3" class="slider" id="ReleaseSlider"
+                onchange="updateRelease()" />Release
+        </label>
+    </div>
+
+    <p><b>oscillation:</b></p>
+    <label><input id="LFO" type="checkbox" />LFO Enabled (N/A for Additive synthesis)</label>
+    <div>
+        <label><input type="range" min="0" max="3" step="0.1" value="1" class="slider" id="LFOSlider1"
+                onchange="updateFrequencyValue()" />Frequency
+        </label>
+    </div>
+    <div>
+        <label><input type="range" min="0" max="500" step="10" value="10" class="slider" id="LFOSlider2"
+                onchange="updateDepthValue()" />Depth
+        </label>
+    </div>
+
+
+</body>
+<script src="main.js"></script>
+
+</html>

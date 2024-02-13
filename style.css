@@ -1,0 +1,22 @@
+.sphere-container {
+    width: 500px;
+    height: 500px;
+    perspective: 300;
+    background-color: rgba(20, 51, 138, 0.8);
+    border-radius: 30px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.sphere {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    justify-content: center;
+    transition: transform 0.2s ease-out, background-color 0.7s ease-out;
+}
+
+.p1 {
+    font-family: "Monaco", monospace;
+}
